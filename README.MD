@@ -36,4 +36,4 @@
 <img src="./readme_assets/photo_2022-11-24_00-29-28.jpg" width="30%"></p>
 
 <p align="center">
-<img src="./readme_assets/photo_2022-11-24_00-29-44.jpg" width="30%"></p>
+<img src="./readme_assets/photo_2022-11-24_00-28-44.jpg" width="30%"></p>
