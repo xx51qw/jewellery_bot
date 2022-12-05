@@ -8,7 +8,7 @@ from parse import scrap_collection, scrap_category
 async def collection_keyboard():
     keyboard = InlineKeyboardMarkup(row_width=1)
     collection = await scrap_collection()
-    keyboard.add(InlineKeyboardButton(text=collection[0], callback_data='kollekciy-svetlany-ermolaev'))
+    keyboard.add(InlineKeyboardButton(text=collection[0], callback_data='colleciy-svetlana-ermoleva'))
     keyboard.add(InlineKeyboardButton(text=collection[1], callback_data='colleciy-daniel-malaev'))
     keyboard.add(InlineKeyboardButton(text='Отмена', callback_data='stop'))
 

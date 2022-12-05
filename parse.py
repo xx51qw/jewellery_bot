@@ -9,7 +9,7 @@ from typing import List, Dict
 @logger.catch
 async def scrap_about() -> List:
     """Функция для получения информации о компании"""
-    ua = UserAgent()
+    ua = UserAgent(verify_ssl=False)
     headers = {'User-Agent': ua.random}
     async with aiohttp.ClientSession() as session:
         url = 'https://danielmalaev.ru/o-kompanii'
@@ -30,7 +30,7 @@ async def scrap_about() -> List:
 @logger.catch
 async def scrap_delivery() -> List:
     """Функция для получения информации о оплате и доставке"""
-    ua = UserAgent()
+    ua = UserAgent(verify_ssl=False)
     headers = {'User-Agent': ua.random}
     async with aiohttp.ClientSession() as session:
         url = 'https://danielmalaev.ru/oplata-i-dostavka'
@@ -58,7 +58,7 @@ async def scrap_delivery() -> List:
 @logger.catch
 async def scrap_contacts() -> List:
     """Функция для получения контактов и адресе"""
-    ua = UserAgent()
+    ua = UserAgent(verify_ssl=False)
     headers = {'User-Agent': ua.random}
     async with aiohttp.ClientSession() as session:
         url = 'https://danielmalaev.ru/kontakty'
@@ -80,7 +80,7 @@ async def scrap_contacts() -> List:
 @logger.catch
 async def scrap_collection() -> List:
     """Функция для получения ювелирных коллекций"""
-    ua = UserAgent()
+    ua = UserAgent(verify_ssl=False)
     headers = {'User-Agent': ua.random}
     async with aiohttp.ClientSession() as session:
         url = 'https://danielmalaev.ru/'
@@ -103,7 +103,7 @@ async def scrap_collection() -> List:
 @logger.catch
 async def scrap_category(collection) -> Dict:
     """Функция для получения категорий украшений"""
-    ua = UserAgent()
+    ua = UserAgent(verify_ssl=False)
     headers = {'User-Agent': ua.random}
     async with aiohttp.ClientSession() as session:
         url = 'https://danielmalaev.ru/' + str(collection)
@@ -126,7 +126,7 @@ async def scrap_category(collection) -> Dict:
 @logger.catch
 async def scrap_links(jewellery) -> List:
     """Функция для получения ссылок на украшения"""
-    ua = UserAgent()
+    ua = UserAgent(verify_ssl=False)
     headers = {'User-Agent': ua.random}
     async with aiohttp.ClientSession() as session:
         url = 'https://danielmalaev.ru/' + str(jewellery)
@@ -149,7 +149,7 @@ async def all_items(links) -> List:
     try:
         info_list = []
         for link in links:
-            ua = UserAgent()
+            ua = UserAgent(verify_ssl=False)
             headers = {'User-Agent': ua.random}
             async with aiohttp.ClientSession() as session:
                 url = 'https://danielmalaev.ru/' + str(link)
