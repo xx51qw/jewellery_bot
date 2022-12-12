@@ -1,4 +1,4 @@
-<h1 align="center">Телеграм бот по поиску отелей</h1>
+<h1 align="center">Телеграм бот для ювелирного дома Daniel Malaev</h1>
 <p align="center">
 <img src="./readme_assets/photo_2022-11-24_00-29-32.jpg">
 </p>
